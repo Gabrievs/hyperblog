@@ -1,0 +1,4 @@
+Esta es mi prueba usando la terminal de Git bash
+Tengo que aprender 
+
+Para poder mejorar.
