@@ -1,0 +1,26 @@
+ssh-keygen -t rsa -b 4096 -C "correo@example.com"
+
+- Verificar que el servicio esta corriendo:
+  eval $(ssh-agent -s)
+
+- Agregar la llave
+  ss-add ~/.ssh/id_rsa
+############################################################################
+
+					En Mac
+
+- Verificar que el servicio esta corriendo:
+  eval "$(ssh-agent -s)"
+ 
+- Crear el archivo config si no existe en la carpeta de SSH
+
+  vim config
+
+	Host *
+		AddKeysToAgent yes
+		UseKeychain yes
+		IdentityFile ~/.ssh/id_rsa
+
+- Agregar la llave
+
+  ss-add -K ~/.ssh/id_rsa   (K por el Keychain, si sale error solo borrar)
